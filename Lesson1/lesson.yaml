@@ -1,0 +1,16 @@
+- Class: meta
+  Course: PoliSwirl
+  Lesson: Lesson1
+  Author: Isabella
+  Type: Standard
+  Organization: American University 
+  Version: 2.4.4
+
+- Class: text
+  Output: Hi! Welcome to Isabella's swirl course!
+
+- Class: cmd_question
+  Output: Type the number 1
+  CorrectAnswer: 1
+  AnswerTests: omnitest(correctExpr='1')
+  Hint: Type a hint
