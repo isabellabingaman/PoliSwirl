@@ -46,7 +46,7 @@
 
 - Class: cmd_question
   Output: Assign the vector c(1:3) to an object named with your first and last name in PascalCase
-  CorrectAnswer: (^[A-Z][a-z0-9]+[A-Z]$)|(^[A-Z][a-z0-9]+([A-Z][a-z0-9]+)+$)|(^[A-Z][a-z0-9]+([A-Z][a-z0-9]+)+[A-Z]$) <- c(1:3)
+  CorrectAnswer: '(^[A-Z][a-z0-9]+[A-Z]$)|(^[A-Z][a-z0-9]+([A-Z][a-z0-9]+)+$)|(^[A-Z][a-z0-9]+([A-Z][a-z0-9]+)+[A-Z]$) <- c(1:3)'
   AnswerTests: expr_creates_var('(^[A-Z][a-z0-9]+[A-Z]$)|(^[A-Z][a-z0-9]+([A-Z][a-z0-9]+)+$)|(^[A-Z][a-z0-9]+([A-Z][a-z0-9]+)+[A-Z]$)')
   Hint: Avoid using special characters and consecutive capitals. For example, if your name is Kyle O'Donnell, the correct answer would be KyleOdonnell, not KyleO'Donnell or KyleODonell
   
