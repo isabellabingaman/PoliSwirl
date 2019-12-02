@@ -19,32 +19,17 @@
   Output: Incredible work! You know what you're doing.
 
 - Class: text
-  Output: Welcome to PoliSwirl.
-This swirl course is intended to build upon the 
-current swirl course directory. 
-For foundational R Programming knowledge, embark upon
-either the Beginner, Intermediate, and/or Advanced 
-Programming courses. 
+  Output: Welcome to PoliSwirl. This swirl course is intended to build upon the current swirl course directory. For foundational R Programming knowledge, embark upon either the Beginner, Intermediate, and/or Advanced Programming courses. 
 
 - Class: text
-  Output: There are 4 internal lessons that cover:
-Wrangling data
-Modeling data
-Testing data 
-    and
-Communicating your findings 
-
-
+  Output: There are 4 internal lessons that cover: Wrangling data, Modeling data, Testing data and Communicating your findings.  
 
 - Class: text
-  Output: There are a few data sets that have been placed in 
-your console for use in this course.
+  Output: There are a few data sets that have been placed in your console for use in this course.
 
 
 - Class: cmd_question
   Output: Call the head() of the PolityIV dataset and check it out.
   CorrectAnswer: head(PolityIV)
   AnswerTests: omnitest(correctExpr='head(PolityIV)')
-  Hint: Use the name of the dataset as an argument within the 
-head() function. 
-Make sure your spelling and capitalization is correct.
+  Hint: Use the name of the dataset as an argument within the head() function. Make sure your spelling and capitalization is correct.
