@@ -29,7 +29,7 @@
   Output: If you do NOT want the variables with value labels to be converted into R factors with corresponding levels, you should set the use.value.labels argument to FALSE. 
 
 - Class: cmd_question
-  Output: Write the command necessary to read the SPSS data named "survey.sav" into a data frame called SPSSData
-  CorrectAnswer: SPSSData <- read.spss("survey.sav", to.data.frame = TRUE)
+  Output: Write the command necessary to read the SPSS data named "survey.sav" in the top level of your directory into a data frame called SPSSData
+  CorrectAnswer: SPSSData <- read.spss("~/survey.sav", to.data.frame = TRUE)
   AnswerTests: omnitest(correctExpr='SPSSData <- read.spss("survey.sav", to.data.frame = TRUE)')
   Hint: Remember to specify that you want the result to be displayed as a data frame.
