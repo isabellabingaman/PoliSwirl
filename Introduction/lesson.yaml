@@ -33,3 +33,24 @@
   CorrectAnswer: head(PolityIV)
   AnswerTests: omnitest(correctExpr='head(PolityIV)')
   Hint: Use the name of the dataset as an argument within the head() function. Make sure your spelling and capitalization is correct.
+
+- Class: cmd_question
+  Output: Now check out the head() of the second dataset used, "ANES".
+  CorrectAnswer: head(ANES)
+  AnswerTests: omnitest(correctExpr='head(ANES)')
+  Hint: Do the same thing you did to find the head of the PolityIV dataset. Remember to check for spelling and capitalization. 
+
+
+- Class: text
+  Output: Remember, you can use the play() function to play around in the console without interference from swirl. If you wish to explore more about these datasets, use the play() function and simply use nxt() when you're finished.  
+
+
+- Class: text
+  Output: You also now have access to downloaded packages that will help you complete this course, such as mapproj.
+
+- Class: mult_question
+  Output: Which function will give you more info about the mapproj package?
+  AnswerChoices: ?mapproj();help_me(mapproj);what.is(mapproj)
+  CorrectAnswer: ?mapproj()
+  AnswerTests: omnitest(correctVal='?mapproj()')
+  Hint: The question mark is a useful tool in providing more information. 
