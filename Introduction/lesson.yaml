@@ -36,8 +36,8 @@
 
 - Class: cmd_question
   Output: Now use the View() function to visualize the second dataset, "ANES".
-  CorrectAnswer: head(ANES)
-  AnswerTests: omnitest(correctExpr='head(ANES)')
+  CorrectAnswer: View(ANES)
+  AnswerTests: omnitest(correctExpr='View(ANES)')
   Hint: Use the name of the dataset as an argument within the View() function. Remember to check for spelling and capitalization. 
 
 

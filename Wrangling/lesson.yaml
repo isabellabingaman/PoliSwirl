@@ -66,4 +66,21 @@
 - Class: text
   Output: It is also important that the variables have brief yet meaningful labels. It is all too common that those who collect political data don't record it in a way that is efficient for data analysis. Luckily, the recode() function makes this process relatively quick and painless.
 
+- Class: text
+  Output: The recode() function behaves similarly to the rename() function, but instead of utilizing the pipe, uses the $ to specify exactly which data are being recoded. To start, identify the column you wish to recode in the format of DataFrame$Column and assign that object to a recode(). After identifying the correct column again in the first argument of the function, "Old Labels" are set equal to = "New Labels" and separated by, commas. For example, to recode the flag variable within the PolityIV dataset, the correct syntax would be -- PolityIV$flag <- recode(PolityIV$flag, "0" = "NA", "1" = "Positive", "2" = "Negative") 
+
+
+
+- Class: cmd_question
+  Output: Run the command PolityIV$flag <- recode(PolityIV$flag, "0" = "NA", "1" = "Positive", "2" = "Negative") to recode the flag variable.
+  CorrectAnswer: PolityIV$flag <- recode(PolityIV$flag, "0" = "NA", "1" = "Positive", "2" = "Negative")
+  AnswerTests: omnitest(correctExpr='PolityIV$flag <- recode(PolityIV$flag, "0" = "NA", "1" = "Positive", "2" = "Negative")')
+  Hint: Enter the exact command-line code. 
+
+
+- Class: cmd_question
+  Output: Use the unique(PolityIV$flag) function to view the new, unique labels we have created for the flag variable.
+  CorrectAnswer: unique(PolityIV$flag)
+  AnswerTests: omnitest(correctExpr='unique(PolityIV$flag)')
+  Hint: Enter the exact command-line code. 
 
