@@ -16,8 +16,6 @@
 - Class: text
   Output: The 'foreign' package contains functions to read data from SPSS, Minitab, STATA and other varied formats. We'll use an SPSS file for an example, though each format takes on similar arguments.
   
-  
-
 
 - Class: text
   Output: The function read.spss() will effectively read your data into the console. The first argument read.spss() takes should always be "the name of the dataframe in quotation marks" 
@@ -41,8 +39,7 @@
   Output: Once you've read the data, it's important to make sure your variables are correctly named so that you can reference them quickly and easily.
 
 - Class: text
-  Output: Your variables (columns) should be named consistently in either PascalCase, snakecase, or ALLCAPS. PascalCase, as it appears, capitalizes the first letter of each word only. snakecase has all letters in lowercase, and ALLCAPS in uppercase. 
-
+  Output: Your variables (columns) should be named consistently in either PascalCase, snakecase, or with under_scores. PascalCase, as it appears, capitalizes the first letter of each word only. snakecase has all letters in lowercase. under_scores separate each unique word! 
 
 
 - Class: cmd_question
@@ -51,3 +48,22 @@
   AnswerTests: omnitest(correctExpr='TheBiggestNumber <- 10')
   Hint: Remember, PascalCase uses a new uppercase at the start of each word. 
 
+- Class: text
+  Output: It is important to maintain the names of all of your columns in the same format to efficiently reference your variables. Whether it be with PascalCase, snakecase, or using under_scores, each column should be formatted exactly the same. 
+  
+- Class: text
+  Output: The rename() function from the dplyr package helps us significantly. The rename() function first takes the argument specifying the data frame. This is followed by a set of arguments that specify the new and old column names, where NewName = OldName and multiple name changes are separated by a comma.  
+
+- Class: text
+  Output: For example, to rename the "caseid" column in the ANES dataset to "CaseID", the following function would be appropriate 
+rename(ANES, caseid = CaseID)
+
+- Class: text
+  Output: It is also important that the variables have brief yet meaningful labels. It is all too common that those who collect political data don't record it in a way that is efficient for data analysis. Luckily, the recode() function makes this process relatively quick and painless.
+
+
+- Class: cmd_question
+  Output: Rename the "weight" and "follow" columns within ANES data with a leading capital letter.
+  CorrectAnswer: rename(ANES, weight = Weight, follow = Follow)
+  AnswerTests: omnitest(correctExpr='rename(ANES, weight = Weight, follow = Follow)')
+  Hint: The new columns should be named "Weight" and "Follow". Ensure that you're separating the two equations with a comma and that you've specified the data frame you're pulling from.
