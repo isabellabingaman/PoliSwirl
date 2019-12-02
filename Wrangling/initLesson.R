@@ -19,7 +19,5 @@ PolityIV <- read_excel(file.path(.get_course_path(), "PoliSwirl", "Introduction"
 
 ANES <- read.csv(file.path(.get_course_path(), "PoliSwirl", "Introduction", "anes_pilot_2016.csv"))
 
-# load survey.sav data 
 
-SPSSData <- read.spss(file.path(.get_course_path(), "PoliSwirl", "Wrangling", "survey.sav"), to.data.frame = TRUE)
 

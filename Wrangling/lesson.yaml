@@ -28,8 +28,23 @@
 - Class: text
   Output: If you do NOT want the variables with value labels to be converted into R factors with corresponding levels, you should set the use.value.labels argument to FALSE. 
 
+
+
+- Class: mult_question
+  Output: Which is the correct command necessary to read the SPSS data named "survey.sav" into a data frame called SPSSData?
+  AnswerChoices: SPSSData <- read.spss("survey.sav", to.data.frame = TRUE);read.spss(SPSSData, "survey.sav");SPSSData(read.spss, "survey.sav", to.data.frame = TRUE)
+  CorrectAnswer: SPSSData <- read.spss("survey.sav", to.data.frame = TRUE)
+  AnswerTests: omnitest(correctVal='SPSSData <- read.spss("survey.sav", to.data.frame = TRUE)')
+  Hint: Remember which aspects of the command line are functions and which are arguments.
+
+- Class: text
+  Output: Once you've read the data, it's important to make sure your variables are correctly named so that you can reference them quickly and easily.
+
+- Class: text
+  Output: Your variables (columns) should be named consistently in either PascalCase, snakecase, or ALLCAPS. PascalCase, as it appears, capitalizes the first letter of each word only. snakecase has all letters in lowercase, and ALLCAPS in uppercase. 
+
 - Class: cmd_question
-  Output: Write the command necessary to read the SPSS data named "survey.sav" in the top level of your directory into a data frame called SPSSData
-  CorrectAnswer: SPSSData <- read.spss("~/survey.sav", to.data.frame = TRUE)
-  AnswerTests: omnitest(correctExpr='SPSSData <- read.spss("survey.sav", to.data.frame = TRUE)')
-  Hint: Remember to specify that you want the result to be displayed as a data frame.
+  Output: Write your first and last name using alphanumerics in PascalCase.
+  CorrectAnswer: (^[A-Z][a-z0-9]+[A-Z]$)|(^[A-Z][a-z0-9]+([A-Z][a-z0-9]+)+$)|(^[A-Z][a-z0-9]+([A-Z][a-z0-9]+)+[A-Z]$)
+  AnswerTests: omnitest(correctExpr='(^[A-Z][a-z0-9]+[A-Z]$)|(^[A-Z][a-z0-9]+([A-Z][a-z0-9]+)+$)|(^[A-Z][a-z0-9]+([A-Z][a-z0-9]+)+[A-Z]$)')
+  Hint: Avoid using special characters and consecutive capitals. For example, if your name is Kyle O'Donnell, the correct answer would be KyleOdonnell, not KyleO'Donnell or KyleODonell 
