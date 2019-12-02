@@ -14,3 +14,8 @@
 # load PolityIV dataset 
 
 PolityIV <- read_excel(file.path(.get_course_path(), "PoliSwirl", "Introduction", "p4v2018.xls"))
+
+# load ANES data 
+
+ANES <- read.csv(file.path(.get_course_path(), "PoliSwirl", "Introduction", "anes_pilot_2016.csv"))
+
