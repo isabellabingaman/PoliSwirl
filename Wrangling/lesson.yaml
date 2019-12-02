@@ -52,18 +52,18 @@
   Output: It is important to maintain the names of all of your columns in the same format to efficiently reference your variables. Whether it be with PascalCase, snakecase, or using under_scores, each column should be formatted exactly the same. 
   
 - Class: text
-  Output: The rename() function from the dplyr package helps us significantly. The rename() function first takes the argument specifying the data frame. This is followed by a set of arguments that specify the new and old column names, where NewName = OldName and multiple name changes are separated by a comma.  
+  Output: The rename() function from the dplyr package helps us significantly. It is most efficient to use the pipe with rename to specify the data frame you're working in. The syntax of the arguments specify the new and existing column names, where NewName = ExistingName and multiple name changes are separated by a comma. For the purposes of wrangling data, its most useful to re-assign this data set back to the original to start using the cleaned version right away.  
 
 - Class: text
-  Output: For example, to rename the "caseid" column in the ANES dataset to "CaseID", the following function would be appropriate 
-# rename(ANES, caseid = CaseID)
+  Output: For example, to rename the "caseid" column in the ANES dataset to "CaseID", the following function would be appropriate --    ANES <- ANES %>% rename(CaseID = caseid)
+
+- Class: cmd_question
+  Output: Rename the "weight" and "follow" columns within ANES data with leading Uppercase Letters and re-assign it back to the original ANES dataset. 
+  CorrectAnswer: ANES <- ANES %>% rename(Weight = weight, Follow = follow)
+  AnswerTests: omnitest(correctExpr='ANES <- ANES %>% rename(Weight = weight, Follow = follow)')
+  Hint: The correct new column names are "Weight" and "Follow".Start by assigning the dataset back to ANES, then make sure you're using the pipe to identify the data you'll be renaming. Remember to separate the two arguments with a comma.
 
 - Class: text
   Output: It is also important that the variables have brief yet meaningful labels. It is all too common that those who collect political data don't record it in a way that is efficient for data analysis. Luckily, the recode() function makes this process relatively quick and painless.
 
 
-- Class: cmd_question
-  Output: Rename the "weight" and "follow" columns within ANES data with a leading capital letter.
-  CorrectAnswer: rename(ANES, weight = Weight, follow = Follow)
-  AnswerTests: omnitest(correctExpr='rename(ANES, weight = Weight, follow = Follow)')
-  Hint: The new columns should be named "Weight" and "Follow". Ensure that you're separating the two equations with a comma and that you've specified the data frame you're pulling from.
