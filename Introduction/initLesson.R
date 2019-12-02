@@ -13,4 +13,4 @@
 
 # load PolityIV dataset 
 
-PolityIV <- read.csv(file.path(.get_course_path(), "PoliSwirl", "Introduction", "p4v2017d.csv"))
+PolityIV <- read.xls(file.path(.get_course_path(), "PoliSwirl", "Introduction", "p4v2018.xls"))
