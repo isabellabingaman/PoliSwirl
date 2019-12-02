@@ -56,7 +56,7 @@
 
 - Class: text
   Output: For example, to rename the "caseid" column in the ANES dataset to "CaseID", the following function would be appropriate 
-rename(ANES, caseid = CaseID)
+# rename(ANES, caseid = CaseID)
 
 - Class: text
   Output: It is also important that the variables have brief yet meaningful labels. It is all too common that those who collect political data don't record it in a way that is efficient for data analysis. Luckily, the recode() function makes this process relatively quick and painless.
