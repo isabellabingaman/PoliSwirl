@@ -1,0 +1,35 @@
+- Class: meta
+  Course: PoliSwirl
+  Lesson: Wrangling
+  Author: Isabella Bingaman
+  Type: Standard
+  Organization: American University
+  Version: 2.4.4
+
+- Class: text
+  Output: In this lesson, you'll learn how to wrangle political data to work for you. 
+
+- Class: text
+  Output: First and foremost, it's not always easy to import your data. Often you'll find political data in an unfamiliar source format. The 'foreign' package can help with that. 
+  
+  
+- Class: text
+  Output: The 'foreign' package contains functions to read data from SPSS, Minitab, STATA and other varied formats. We'll use an SPSS file for an example, though each format takes on similar arguments.
+  
+  
+
+
+- Class: text
+  Output: The function read.spss() will effectively read your data into the console. The first argument read.spss() takes should always be "the name of the dataframe in quotation marks" 
+
+- Class: text
+  Output: Additionally, if you wish the result to be displayed in a data frame, make sure to use the argument to.data.frame = TRUE and vice versa for the opposite.  
+
+- Class: text
+  Output: If you do NOT want the variables with value labels to be converted into R factors with corresponding levels, you should set the use.value.labels argument to FALSE. 
+
+- Class: cmd_question
+  Output: Write the command necessary to read the SPSS data named "surveydata.sav" into a data frame called SPSSData
+  CorrectAnswer: SPSSData <- read.spss("survey.data", to.data.frame = TRUE)
+  AnswerTests: omnitest(correctExpr='SPSSData <- read.spss("surveydata.sav", to.data.frame = TRUE)')
+  Hint: Remember to specify that you want the result to be displayed as a data frame.

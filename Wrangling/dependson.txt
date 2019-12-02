@@ -1,0 +1,6 @@
+tidyverse
+readxl
+tinytex
+openintro
+mapproj
+foreign
