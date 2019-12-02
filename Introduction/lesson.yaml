@@ -1,0 +1,50 @@
+- Class: meta
+  Course: PoliSwirl
+  Lesson: Introduction
+  Author: Isabella
+  Type: Standard
+  Organization: American University 
+  Version: 2.4.4
+
+- Class: text
+  Output: Hi! Welcome to PoliSwirl!
+
+- Class: cmd_question
+  Output: Is this thing on? Type the number 1.
+  CorrectAnswer: 1
+  AnswerTests: omnitest(correctExpr='1')
+  Hint: Just type 1, nothing else and nothing more.
+
+- Class: text
+  Output: Incredible work! You know what you're doing.
+
+- Class: text
+  Output: Welcome to PoliSwirl.
+This swirl course is intended to build upon the 
+current swirl course directory. 
+For foundational R Programming knowledge, embark upon
+either the Beginner, Intermediate, and/or Advanced 
+Programming courses. 
+
+- Class: text
+  Output: There are 4 internal lessons that cover:
+- Wrangling data
+- Modeling data
+- Testing data 
+    and
+- Communicating your findings 
+
+
+
+- Class: text
+  Output: There are a few data sets that have been placed in 
+your console for use in this course.
+
+
+- Class: cmd_question
+  Output: Call the head() of the PolityIV dataset and check it out.
+  CorrectAnswer: head(PolityIV)
+  AnswerTests: omnitest(correctExpr='head(PolityIV)')
+  Hint: Use the name of the dataset as an argument within the 
+head() function. 
+Make sure your spelling and capitalization is correct.
