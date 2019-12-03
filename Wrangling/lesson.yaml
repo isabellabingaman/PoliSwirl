@@ -127,13 +127,11 @@
 - Class: text
   Output: We can use the make_date() function to execute this. It's best practice to first rename columns with meaningful labels (so, for example, the column that contains the "year" variable should be named "year"). To make the new "date" column, we can utilize the mutate() function, setting the new "date" column equal to the make_date() function that specifies which columns to pull the variables from, separated by commas.  
 
-
-- Class: cmd_question
+- Class: text_question
   Output: Use the mutate() function to make a new column named "date" within the dataframe flights using the 3 columns year, month, and day.
-  CorrectAnswer: mutate(flights, date = make_date(year, month, day)
-  AnswerTests: omnitest(correctExpr='mutate(flights, date = make_date(year, month, day)')
-  Hint: Use the make_date() function within the mutate() function. Remember, you can always play around in the console using play().
-
+  CorrectAnswer: mutate(flights, date = make_date(year, month, day))
+  AnswerTests: 
+  Hint: Use the make_date() function within the mutate() function. The arguments in the make_date() function are your column names, separated by commas.
 
 - Class: text
   Output: Another important aspect in wrangling political data to work for you is ensuring there are no extra symbols that could complicate your analysis, such as leading dollar signs or commas in large numbers that stop you from conducting numeric analysis. The gsub() function along with the as.numeric() function remedy these issues. 
@@ -178,3 +176,4 @@
 
 - Class: text
   Output: After your data is wrangled and cleaned, you're ready to model it and test it out. Move on to the next sections to learn more!
+
