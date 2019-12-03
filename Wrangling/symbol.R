@@ -4,4 +4,4 @@ colnames(symbol) <- c("Symbol", "Meaning", "Example")
 
 symbol <- as.table(symbol)
 
-symbol 
+print(symbol) 
