@@ -146,7 +146,7 @@
   VideoLink: https://swirlstats.com/scn/regular_expressions.html
 
 - Class: figure
-  Output: So, given data such as numbers:
+  Output: So, given data such as numbers,
   Figure: numbersdata.R
   FigureType: new
 
