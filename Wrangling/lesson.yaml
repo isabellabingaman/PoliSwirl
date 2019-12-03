@@ -113,14 +113,6 @@
 
 
 - Class: mult_question
-  Output: Which is the correct expression of the date format for the character string "1998-04-25"?
-  AnswerChoices: `%Y-%m-$d`;`%y-%m-%d`;`%Y/%m/%d`
-  CorrectAnswer: `%Y-%m-%d`
-  AnswerTests: omnitest(correctVal='`%Y-%m-%d`')
-  Hint: Make sure you're using the same separator as the original string. Make sure you're paying attention to capitalization and order.
-
-
-- Class: mult_question
   Output: If a column in our data frame named Dates is formatted like "April 25 1998", which would correctly conver these characters to dates?
   AnswerChoices: df$Dates <- as.Date(df$Dates, format = "%B %d %Y");df$Dates <- as.Date(df$Dates, format = "%b-%d-%Y");df$Dates <- as.Date(df$Dates, format = "%B %Y %d")
   CorrectAnswer: df$Dates <- as.Date(df$Dates, format = "%B %d %Y")
