@@ -107,15 +107,82 @@
   Output: For example, if the characters I wanted to reformat into dates look like "04/25/1998", the format I would specify is "%m/%d/%Y" 
 
 
-
 - Class: video
   Output: If you'd like more detail on how lubridate interprets date-times, visit their very helpful cheat sheet. 
   VideoLink: https://rawgit.com/rstudio/cheatsheets/master/lubridate.pdf
 
 
-
-- Class: text_question
-  Output: In "quotes", write the correct date format for the character string "2007-06-22"
+- Class: mult_question
+  Output: Which is the correct expression of the date format for the character string "1998-04-25"?
+  AnswerChoices: "%Y-%m-$d";"%y-%m-%d";"%Y/%m/%d"
   CorrectAnswer: "%Y-%m-%d"
-  AnswerTests: omnitest(correctExpr='"%Y-%m-%d"')
-  Hint: Make sure you're using the same separator as the original string. Make sure you're paying attention to capitalization and order. Make sure you put your answer in quotation marks. 
+  AnswerTests: omnitest(correctVal='"%Y-%m-%d"')
+  Hint: Make sure you're using the same separator as the original string. Make sure you're paying attention to capitalization and order.
+
+
+- Class: mult_question
+  Output: If a column in our data frame named Dates is formatted like "April 25 1998", which would correctly conver these characters to dates?
+  AnswerChoices: df$Dates <- as.Date(df$Dates, format = "%B %d %Y");df$Dates <- as.Date(df$Dates, format = "%b-%d-%Y");df$Dates <- as.Date(df$Dates, format = "%B %Y %d")
+  CorrectAnswer: df$Dates <- as.Date(df$Dates, format = "%B %d %Y")
+  AnswerTests: omnitest(correctVal='df$Dates <- as.Date(df$Dates, format = "%B %d %Y")')
+  Hint: Make sure you're using the same separator as the original string. Make sure you're paying attention to capitalization and order.
+
+- Class: figure
+  Output: Sometimes, our date values (year, month, day) are spread throughout columns, such as shown below in the nycflights13 data. It is most efficient to consolidate the variables and gather them into one date column.
+  Figure: flights.R
+  FigureType: new
+
+- Class: text
+  Output: We can use the make_date() function to execute this. It's best practice to first rename columns with meaningful labels (so, for example, the column that contains the "year" variable should be named "year"). To make the new "date" column, we can utilize the mutate() function, setting the new "date" column equal to the make_date() function that specifies which columns to pull the variables from, separated by commas.  
+
+
+- Class: cmd_question
+  Output: Use the mutate() function to make a new column named "date" within the dataframe flights using the 3 columns year, month, and day.
+  CorrectAnswer: mutate(flights, date = make_date(year, month, day)
+  AnswerTests: omnitest(correctExpr='mutate(flights, date = make_date(year, month, day)')
+  Hint: Use the make_date() function within the mutate() function. Remember, you can always play around in the console using play().
+
+
+- Class: text
+  Output: Another important aspect in wrangling political data to work for you is ensuring there are no extra symbols that could complicate your analysis, such as leading dollar signs or commas in large numbers that stop you from conducting numeric analysis. The gsub() function along with the as.numeric() function remedy these issues. 
+
+- Class: text
+  Output: The gsub() function essentially subsitutes a string of text with other text. After we have successfully substituted out the text we no longer want from the string, as.numeric will coerce the string variable back into a numeric.
+
+- Class: video
+  Output: By using the gsub() function to subsitute the unwanted string with blank "" we can effectively delete it. But we must remember that when we identify metacharacters such as the dollar sign, we must utilize the \escape to ensure we are correctly identifying the characters we wish to substitute. For a refresher on metacharacters and regular expressions, you can enlist in the RegEx swirl course!
+  VideoLink: https://swirlstats.com/scn/regular_expressions.html
+
+- Class: figure
+  Output: So, given data such as numbers:
+  Figure: numbersdata.R
+  FigureType: new
+
+
+- Class: figure
+  Output: We would use the command numbersdata$numbers <- as.numeric(gsub(",","",numbersdata$numbers) to replace all commas with nothing, effectively deleting them. Notice that the gsub() function takes the data argument after the pattern argument. 
+  Figure: numbersagain.R
+  FigureType: new
+
+
+- Class: text
+  Output: Last but not least, it is extremely important to acknowledge factor levels within political data. Often, variables such as political party and religion have more meaning than their simple categories and share a relationship between the other responses as levels. 
+
+- Class: text
+  Output: Using simple base R functions, we can add value labels to our data in order to structure it in levels. There are two functions, factor() which can be used with nominal data, and ordered() which can be used with ordinal data. They both take on the same arguments. 
+
+- Class: text
+  Output: The first argument factor() and ordered() take is the dataframe$column of interest, followed by the levels = argument, where you identify how the levels are coded within the dataframe. After this, the labels = argument, which identifies the cooresponding levels in order. 
+
+- Class: text
+  Output: For example, given a dataset that includes the variable displaying `feeling_thermometer` scores coded with 1, 3 and 5 to represent Low, Medium, and High readings. If we want to assign this ordinal data to the score levels 1=Low, 2=Medium,3=High, we would use the ordinal() function. 
+
+- Class: mult_question
+  Output: Which is the correct command line for assigning these levels?
+  AnswerChoices: mydata$feeling_thermometer <- ordered(mydata$feeling_thermometer,levels = c(1,3, 5),labels = c("Low", "Medium", "High"));mydata$feeling_thermometer <- ordered(mydata$feeling_thermometer,labels = c(1,3, 5),levels = c("Low", "Medium", "High"));mydata$feeling_thermometer <- ordered(labels = c("Low", "Medium", "High"))
+  CorrectAnswer: mydata$feeling_thermometer <- ordered(mydata$feeling_thermometer,levels = c(1,3, 5),labels = c("Low", "Medium", "High"))
+  AnswerTests: omnitest(correctVal='mydata$feeling_thermometer <- ordered(mydata$feeling_thermometer,levels = c(1,3, 5),labels = c("Low", "Medium", "High"))')
+  Hint: Pay attention to detail.
+
+- Class: text
+  Output: After your data is wrangled and cleaned, you're ready to model it and test it out. Move on to the next sections to learn more!

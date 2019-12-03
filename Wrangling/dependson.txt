@@ -5,3 +5,4 @@ openintro
 mapproj
 foreign
 lubridate
+nycflights13
