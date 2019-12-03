@@ -114,9 +114,9 @@
 
 - Class: mult_question
   Output: Which is the correct expression of the date format for the character string "1998-04-25"?
-  AnswerChoices: "%Y-%m-$d";"%y-%m-%d";"%Y/%m/%d"
-  CorrectAnswer: "%Y-%m-%d"
-  AnswerTests: omnitest(correctVal='"%Y-%m-%d"')
+  AnswerChoices: %Y-%m-$d;%y-%m-%d;%Y/%m/%d
+  CorrectAnswer: %Y-%m-%d
+  AnswerTests: omnitest(correctVal='%Y-%m-%d')
   Hint: Make sure you're using the same separator as the original string. Make sure you're paying attention to capitalization and order.
 
 
