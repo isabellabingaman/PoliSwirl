@@ -118,6 +118,6 @@
 
 - Class: text_question
   Output: Write the correct date format for the character string "2007-06-22"
-  CorrectAnswer: %Y-%m-%d
+  CorrectAnswer: "%Y-%m-%d"
   AnswerTests: omnitest(correctExpr='%Y-%m-%d')
   Hint: Make sure you're using the same separator as the original string. Make sure you're paying attention to capitalization and order.
