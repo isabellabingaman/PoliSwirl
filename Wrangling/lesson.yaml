@@ -87,3 +87,37 @@
   AnswerTests: omnitest(correctExpr='unique(PolityIV$flag)')
   Hint: Enter the exact command-line code. 
 
+
+- Class: text
+  Output: Sometimes variables are a little harder to transform, such as date/time variables. The lubridate package is extremely helpful in coercing date/time variables.
+
+- Class: text
+  Output: In order to make date/time variables work for us, they should be in a standard format. When formatting, R uses a specific syntax to refer to each type of format. 
+  
+  
+- Class: figure
+  Output: At the most basic level, these symbols represent date objects in each potential format. When coercing variables into dates, the format argument will help R to read the format of our current date and/or interpret the desired output.  
+  Figure: symbol.R
+  FigureType: new
+
+- Class: text
+  Output: The first argument in the as.Date() function takes the data of characters to be converted. The proceeding argument clarifies the format.   
+
+- Class: text
+  Output: For example, if the characters I wanted to reformat into dates look like "04/25/1998", the format I would specify is "%m/%d/%Y" 
+
+
+
+- Class: video
+  Output: If you'd like more detail on how lubridate interprets date-times, visit their very helpful cheat sheet. 
+  VideoLink: https://rawgit.com/rstudio/cheatsheets/master/lubridate.pdf
+
+
+
+
+
+- Class: text_question
+  Output: Write the correct date format for the character string "2007-06-22"
+  CorrectAnswer: %Y-%m-%d
+  AnswerTests: omnitest(correctExpr='%Y-%m-%d')
+  Hint: Make sure you're using the same separator as the original string. Make sure you're paying attention to capitalization and order.

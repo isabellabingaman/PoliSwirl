@@ -4,3 +4,4 @@ tinytex
 openintro
 mapproj
 foreign
+lubridate
