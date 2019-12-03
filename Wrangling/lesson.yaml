@@ -159,7 +159,7 @@
   Output: The first argument factor() and ordered() take is the dataframe$column of interest, followed by the levels = argument, where you identify how the levels are coded within the dataframe. After this, the labels = argument, which identifies the cooresponding levels in order. 
 
 - Class: text
-  Output: For example, given a dataset that includes the variable displaying `feeling_thermometer` scores coded with 1, 3 and 5 to represent Low, Medium, and High readings. If we want to assign this ordinal data to the score levels 1=Low, 2=Medium,3=High, we would use the ordinal() function. 
+  Output: For example, given a dataset that includes the variable displaying `feeling_thermometer` scores coded with 1, 3 and 5 to represent Low, Medium, and High readings. If we want to assign this ordinal data to the score levels 1=Low, 2=Medium,3=High, we would use the ordered() function. 
 
 - Class: mult_question
   Output: Which is the correct command line for assigning these levels?
