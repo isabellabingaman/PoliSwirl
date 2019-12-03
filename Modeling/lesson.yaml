@@ -1,0 +1,10 @@
+- Class: meta
+  Course: PoliSwirl
+  Lesson: Modeling
+  Author: Isabella Bingaman
+  Type: Standard
+  Organization: American University
+  Version: 2.4.4
+
+- Class: text
+  Output: This lesson will introduce you to some of the unique capabilities that R-Studio has for displaying your data.
