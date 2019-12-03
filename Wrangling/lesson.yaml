@@ -130,7 +130,7 @@
 - Class: text_question
   Output: Use the mutate() function to make a new column named "date" within the dataframe flights using the 3 columns year, month, and day.
   CorrectAnswer: mutate(flights, date = make_date(year, month, day))
-  AnswerTests: omnitest(correctExpr='mutate(flights, date = make_date(year, month, day))')
+  AnswerTests: omnitest(correctVal='mutate(flights, date = make_date(year, month, day))')
   Hint: Use the make_date() function within the mutate() function. The arguments in the make_date() function are your column names, separated by commas.
 
 - Class: text
