@@ -88,9 +88,9 @@
 
 - Class: mult_question
   Output: Just like we made a subset of the state california data, we create a subset of the county data. Which is the correct command to do this?
-  AnswerChoices: subset(county, region == "california");subset(county, region = "california");subset(county, region == california)
-  CorrectAnswer: subset(county, region == "california")
-  AnswerTests: omnitest(correctVal='subset(county, region == "california")')
+  AnswerChoices: ca_county <- subset(county, region == "california");ca_county <- subset(county, region = "california");ca_county <- subset(county, region == california)
+  CorrectAnswer: ca_county <- subset(county, region == "california")
+  AnswerTests: omnitest(correctVal='ca_county <- subset(county, region == "california")')
   Hint: pay attention to the minute details
 
 - Class: text
