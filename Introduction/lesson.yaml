@@ -22,7 +22,7 @@
   Output: Welcome to PoliSwirl. This swirl course is intended to build upon the current swirl course directory. For foundational R Programming knowledge, embark upon either the Beginner, Intermediate, and/or Advanced Programming courses. 
 
 - Class: text
-  Output: There are four internal lessons that cover Wrangling data, Modeling data, Testing data and Communicating your findings.  
+  Output: There are three internal lessons that cover Wrangling data, Modeling data on maps, and Communicating your findings.  
 
 - Class: text
   Output: There are a few data sets that have been placed in your console for use in this course.
@@ -52,5 +52,5 @@
   Hint: The question mark is a useful tool in providing more information. 
 
 - Class: text
-  Output: Remember, you can use the play() function in the console to play around without interference from swirl. If you wish to explore more about these datasets or packages, use the play() function at the command line and simply use nxt() when you're finished. 
+  Output: Remember, you can use the play() function in the console to play around without interference from swirl. If you wish to explore more about these datasets or packages, use the play() function at the command line and simply use nxt() when you're finished.
   

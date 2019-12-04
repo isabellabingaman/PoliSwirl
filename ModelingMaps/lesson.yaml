@@ -137,7 +137,7 @@
 
 
 - Class: figure
-  Output: Here, I faceted by the variable "census", which effectively split the map up into their directional categories (North, South, East, West). 
+  Output: Here, I faceted by the variable "census", which effectively split the map up into different categories the census grouped into. 
   Figure: map7.R
   FigureType: new
 
