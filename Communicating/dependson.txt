@@ -1,0 +1,7 @@
+tidyverse
+tinytex
+openintro
+ggplot2
+devtools
+dplyr
+stringr

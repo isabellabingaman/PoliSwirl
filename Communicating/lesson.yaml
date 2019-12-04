@@ -1,0 +1,35 @@
+- Class: meta
+  Course: PoliSwirl
+  Lesson: Communicating
+  Author: Isabella Bingaman 
+  Type: Standard
+  Organization: American University 
+  Version: 2.4.4
+
+- Class: text
+  Output: Being able to effectively communicate what you've found in your research is key in making sure its recognizable and reproducable. 
+
+- Class: video
+  Output: If you have a hard time understanding data analysis using statistical inference, hypothesis testing, and probability, enlist in the Statistical Inference Swirl Course 
+  VideoLink: https://swirlstats.com/scn/statinf.html
+
+- Class: text
+  Output: R-markdown files are the most effective for actually communicating your analysis. An R-markdown file can be created by saving a text file with the extension .Rmd or can be opened directly via R-studio. 
+
+- Class: text
+  Output: The information contained in the header (called a YAML header) is important for documenting the file. R-studio will create the YAML header template for you.
+
+- Class: text
+  Output: The most common output arguments are html_document, pdf_document, and word_document, though it is also possible to create a slideshow within markdown.
+
+- Class: text
+  Output: By typing directly into a markdown file, you create plain text that will be displayed in the output. 
+
+- Class: text
+  Output: This text can be customized with *italics*, **bold**, superscript^2^ and ~~strikethrough~~. 
+
+- Class: text_question
+  Output: How would we enter the text "Do your homework" into an r-markdown so that it appears with a strike through it in the output?
+  CorrectAnswer: ~~Do your homework~~
+  AnswerTests: omnitest(correctVal='~~Do your homework~~')
+  Hint: Put the phrase "Do your homework" inside ~~ and ~~ 
