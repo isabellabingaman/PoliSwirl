@@ -45,3 +45,40 @@
   Output: Not too shabby. 
   Figure: map1.R
   FigureType: new
+
+- Class: cmd_question
+  Output: The maps packages also have data that tell us about where we can draw boundaries for states. The same way we assigned the "usa" map to the object usa, assign the map_data("state") map to an object named "state" 
+  CorrectAnswer: state <- map_data("state")
+  AnswerTests: omnitest(correctExpr='state <- map_data("state")')
+  Hint: use state <- map_data("state")
+
+- Class: text
+  Output: When we use the state data instead of the usa data and set fill = region, R constructs polygons in the shape of the states' boundaries.  
+
+- Class: figure
+  Output: When we set the color = "white" the lines that separate the states will be white. 
+  Figure: map2.R
+  FigureType: new
+
+- Class: text
+  Output: When we want to include a map of only one of the states, its as easy as subsetting the data and creating a new map object.
+
+- Class: text
+  Output: For example... to make a map of just California, we can assign the object california to a subset of the dataset state where region is == "california". 
+
+- Class: text
+  Output: Can you guess what the syntax for the next command is?
+
+- Class: cmd_question
+  Output: I bet you were right... enter california <- subset(state, region == "california") to create a california map. 
+  CorrectAnswer: california <- subset(state, region == "california")
+  AnswerTests: omnitest(correctExpr='california <- subset(state, region == "california")')
+  Hint: enter the code exactly as expressed above, notice the two equal signs and california in "quotation marks". 
+
+- Class: text
+  Output: Now, we can plot using the same syntax as before, just simply subsituting the usa map data with the california map data.  
+
+- Class: figure
+  Output: To remove the noise of the axes gridlines, simply tack + theme_nothing() on to the end of your ggplot function. 
+  Figure: map3.R
+  FigureType: new
