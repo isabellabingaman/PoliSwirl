@@ -93,16 +93,16 @@
   Hint: Type a hint.
 
 - Class: text_question
-  Output: How would I enter in the word "Statistics" to make sure it comes out as bolded in my markdown output?
-  CorrectAnswer: **Statistics***
-  AnswerTests: omnitest(correctVal='Nothing')
-  Hint: Put the word Statistics inside ** and **
+  Output: How would I enter in the phrase x2 in my R-markdown to ensure that the 2 is printed as a superscript? 
+  CorrectAnswer: x^2^
+  AnswerTests: omnitest(correctVal='x^2^')
+  Hint: Wrap the 2 with ^ and ^
 
 
 - Class: text_question
   Output: What would we type into our R-markdown file to hyperlink the word "Cheeseburger" to a website whose address is www.mcdonalds.com  
   CorrectAnswer: [Cheeseburger](www.mcdonalds.com)
-  AnswerTests: omnitest(correctVal='Nothing')
+  AnswerTests: omnitest(correctVal='[Cheeseburger](www.mcdonalds.com)')
   Hint: Put the term cheeseburger in square brackets directly followed by www.mcdonalds.com in parentheses. Note that there should be no space in between the two.
 
 - Class: mult_question
