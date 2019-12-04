@@ -3,3 +3,10 @@ readxl
 tinytex
 openintro
 mapproj
+ggplot2
+devtools
+dplyr
+stringr
+maps
+mapdata
+ggmap

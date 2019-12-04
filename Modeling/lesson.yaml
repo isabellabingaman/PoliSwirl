@@ -8,3 +8,35 @@
 
 - Class: text
   Output: This lesson will introduce you to some of the unique capabilities that R-Studio has for displaying your data.
+
+- Class: text
+  Output: The package maps provides us with a lot of data all about locations around the U.S. and around the world. The maps package works well with ggplot2 to provide you with the opportunity to plot data right onto maps, which often times is a key tool in visualizing political data. 
+
+
+- Class: text
+  Output: The mapdata and maps packages contain outlines of continents, countries, states, and counties. We use the ggplot2 package to actually display the data, firstly with the map_data("name") function, where "name" is a quoted string of the name of a map in the maps and/or mapdata packages.  
+
+- Class: text
+  Output: For example, we can assign a USA map from the maps package to an object named usa by running... usa <- map_data("usa"). 
+
+- Class: cmd_question
+  Output: Use the above code to assign a USA map to the object named "usa"
+  CorrectAnswer: usa <- map_data("usa")
+  AnswerTests: omnitest(correctExpr='usa <- map_data("usa")')
+  Hint: Use the exact source code. 
+
+- Class: text
+  Output: To make a plain black map, we'll use the ggplot2 function geom_polygon().
+
+- Class: video
+  Output: If you need a refresher on ggplot2, enlist in the Exploratory Data Anlysis swirl course...
+  VideoLink: https://swirlstats.com/scn/eda.html
+
+- Class: text
+  Output: The geom_polygon() function draws with no line color, but with black fill. The syntax is simple, we start by initiating a ggplot() and adding our geom_polygon() data using the + sign. The first argument in geom_polygon() identifies the data (in this case, the "usa" object we just created), followed by aes(), where x is intuitively the longitude variable, y is the latitude variable, and group is the group variable.    
+
+- Class: cmd_question
+  Output: Run the code using the format described above... ggplot() + geom_polygon(data = usa, aes(x = long, y = lat, group = group)) ... 
+  CorrectAnswer: ggplot() + geom_polygon(data = usa, aes(x = long, y = lat, group = group))
+  AnswerTests: omnitest(correctExpr='ggplot() + geom_polygon(data = usa, aes(x = long, y = lat, group = group))')
+  Hint: Type the exact source code
