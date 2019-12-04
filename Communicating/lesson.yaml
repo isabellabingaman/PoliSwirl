@@ -20,7 +20,7 @@
   Output: The information contained in the header (called a YAML header) is important for documenting the file. R-studio will create the YAML header template for you.
 
 - Class: text
-  Output: The most common output arguments are html_document, pdf_document, and word_document, though it is also possible to create a slideshow within markdown.
+  Output: The most common output arguments in the YAML header are html_document, pdf_document, and word_document, though it is also possible to create a slideshow within markdown.
 
 - Class: text
   Output: By typing directly into a markdown file, you create plain text that will be displayed in the output. 
@@ -33,3 +33,114 @@
   CorrectAnswer: ~~Do your homework~~
   AnswerTests: omnitest(correctVal='~~Do your homework~~')
   Hint: Put the phrase "Do your homework" inside ~~ and ~~ 
+
+- Class: text
+  Output: We indicate the size of our titles/headers with #, where only one creates the # Largest Text, two creates a ## Bit Smaller, and three ### Even Smaller. 
+
+- Class: mult_question
+  Output: Which would look physically larger in the markdown output?
+  AnswerChoices: # Title ;## TITLE;### Title 
+  CorrectAnswer: # Title
+  AnswerTests: omnitest(correctVal='# Title')
+  Hint: Pay attention to the hashtags. 
+
+- Class: text
+  Output: To make a list, we can use * For bullet points and 1. For numbered lists, where sub-points can be identified with a + 
+
+- Class: text
+  Output: We can also hyperlink by putting the link text in [square brackets] directly followed by the actual link (in parentheses). For example, if I wanted to hyperlink the word Google to Google.com, I would type [Google](Google.com).
+  
+
+- Class: text
+  Output: Now for the tricky part, embedding our code right in to the output. 
+
+- Class: text
+  Output: If we wish to include simple inline code, it can be enclosed in `backticks` to be embedded into the report. 
+
+- Class: text
+  Output: To insert a code chunk, which is more realistically how we will share our analysis... start a chunk with ```{r} and end with ``` when the code is complete. 
+
+- Class: text
+  Output: With no specifications, embedding this code chunk will reproduce the code used as well as the output created. 
+
+- Class: text
+  Output: When you'd like to display your code, but not the output created... add eval = FALSE into the ```{r} lead. No need for commas or other syntax!
+
+- Class: text
+  Output: If we want to print the output of the code we used, but not reproduce the actual code... include echo = FALSE into the ```{r} lead. 
+
+- Class: mult_question
+  Output: Which would produce the dimensions of ANES data without the code needed to produce it? 
+  AnswerChoices: ```{r echo = FALSE} dim(ANES) ```;```{r eval = FALSE} dim(ANES) ```;```{r echo = TRUE} dim(ANES) ```
+  CorrectAnswer: ```{r echo = FALSE} dim(ANES) ```
+  AnswerTests: omnitest(correctVal='```{r echo = FALSE} dim(ANES) ```')
+  Hint: Pay attention to echo versus eval 
+
+- Class: text
+  Output: If you want to avoid printing warning or error messages associated with the code, use the warning = FALSE and/or error = FALSE arguments in the ```{r} lead. 
+
+- Class: text
+  Output: Sometimes, we want to run code in the background without printing the code or the output... to do this, we use include = FALSE in the ```{r} lead. 
+
+- Class: text
+  Output: We can include #comments in the chunks of r-code that we include in our markdown, but they will be included in the output so remember to comment judiciously. 
+
+- Class: mult_question
+  Output: What would be displayed by this code chunk in the output?... ```{r include = FALSE} 2 + 2 ```
+  AnswerChoices: Nothing;The number 4;The line 2+2 as well as the number 4 
+  CorrectAnswer: Nothing
+  AnswerTests: omnitest(correctVal='Nothing')
+  Hint: Type a hint.
+
+- Class: text_question
+  Output: How would I enter in the word "Statistics" to make sure it comes out as bolded in my markdown output?
+  CorrectAnswer: **Statistics***
+  AnswerTests: omnitest(correctVal='Nothing')
+  Hint: Put the word Statistics inside ** and **
+
+
+- Class: text_question
+  Output: What would we type into our R-markdown file to hyperlink the word "Cheeseburger" to a website whose address is www.mcdonalds.com  
+  CorrectAnswer: [Cheeseburger](www.mcdonalds.com)
+  AnswerTests: omnitest(correctVal='Nothing')
+  Hint: Put the term cheeseburger in square brackets directly followed by www.mcdonalds.com in parentheses. Note that there should be no space in between the two.
+
+- Class: mult_question
+  Output: If I created a bullet point named "To-Do List", which character would I use to create a sub-item "Homework"?
+  AnswerChoices: + Homework;1. Homework;* Homework
+  CorrectAnswer: + Homework
+  AnswerTests: omnitest(correctVal='+ Homework')
+  Hint: Remember which symbol ADDs as sub-item
+
+- Class: mult_question
+  Output: If I wanted to include a graph of the U.S. that I created in my R-markdown output, but not the code that I used to create it, which argument should I use?
+  AnswerChoices: echo = FALSE;eval = FALSE;include = FALSE
+  CorrectAnswer: echo = FALSE
+  AnswerTests: omnitest(correctVal='echo = FALSE')
+  Hint: Type a hint.
+
+- Class: mult_question
+  Output: If I want to show an example of an error message created by the use of certain code, which argument should I use?  
+  AnswerChoices: error = TRUE;error = FALSE;warning = TRUE
+  CorrectAnswer: error = TRUE
+  AnswerTests: omnitest(correctVal='error = TRUE')
+  Hint: Remember the difference between errors and warnings 
+
+- Class: text
+  Output: When we are ready to share our R-markdown file, its as simple as selecting "Knit". When you knit the markdown file, R will execute all of the code imbedded in the file and insert the results as appropriate. It will also create a word document, pdf, html or other that will be pulled up for preview as well as saved into the current working directory. 
+
+- Class: text
+  Output: One of the most common errors in knitting R-markdown files is confusing the information in your current console with the information provided in the file. An R-markdown cannot execute without loading the necessary packages, datasets, etc. to reproduce the code. Think of it as someone running your code in a brand new R-session. 
+
+- Class: text
+  Output: Once you've created your knitted .Rmd file and desired output, if you have the need to submit just the code used to create your report, the purl() function comes in handy. 
+
+- Class: text
+  Output: The first argument in purl() identifies the .Rmd file you'd like to purl "in quotations". That in itself is sufficient, but if you wish to include the name of the new destination of the .R file containing your code, use the output = argument and name your .R file "in quotes"
+
+- Class: text
+  Output: For example, if I wanted to purl an .Rmd file named Statistics.Rmd and my output be placed in a file named "PurledStats.R", I could run the code purl("Statistics.Rmd", output = "PurledStats.R"). This, of course, is all within the current working directory. 
+
+- Class: video
+  Output: If you'd like to learn more about the way R-markdown works, there are extremely helpful "cheat sheets" online to check out. 
+  VideoLink: https://rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf
