@@ -98,10 +98,9 @@
   AnswerTests: omnitest(correctVal='x^2^')
   Hint: Wrap the 2 with ^ and ^
 
-
 - Class: text_question
   Output: What would we type into our R-markdown file to hyperlink the word "Cheeseburger" to a website whose address is www.mcdonalds.com  
-  CorrectAnswer: [Cheeseburger](www.mcdonalds.com)
+  CorrectAnswer: '[Cheeseburger](www.mcdonalds.com)'
   AnswerTests: omnitest(correctVal='[Cheeseburger](www.mcdonalds.com)')
   Hint: Put the term cheeseburger in square brackets directly followed by www.mcdonalds.com in parentheses. Note that there should be no space in between the two.
 
