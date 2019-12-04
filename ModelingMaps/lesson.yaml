@@ -102,7 +102,7 @@
   FigureType: new
 
 - Class: text
-  Output: Now that we know how to make informative maps, we have the perfect place to visualize our geographical data. This is the perfect opportunity to use the left_join() to bring together map data with a corresponding variable in a political dataset. I'm going to join the election data set with the state map data set. Because they both contain the "region" variable, R will automatically join on that variable, although it can be specified.
+  Output: Now that we know how to make informative maps, we have the perfect place to visualize our geographical data. This is the perfect opportunity to use the left_join() to bring together map data with a corresponding variable in a political dataset. I'm going to join the election data set with the state map data set.
 
 - Class: mult_question
   Output: Which will correctly join the two data sets?
@@ -131,3 +131,15 @@
   Output: Many different types of data can be displayed on maps, but political data is especially viable since we almost always collect geographic information in demographic studies. 
   Figure: map6.R
   FigureType: new
+
+- Class: text
+  Output: We can even use the facet_wrap() function to facet the maps to a categorical variable as we would any other ggplot. 
+
+
+- Class: figure
+  Output: Here, I faceted by the variable "census", which effectively split the map up into their directional categories (North, South, East, West). 
+  Figure: map7.R
+  FigureType: new
+
+- Class: text
+  Output: There are few limits to what R can do in helping you visualize your political data on a map. Get creative!
