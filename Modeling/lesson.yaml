@@ -82,3 +82,21 @@
   Output: To remove the noise of the axes gridlines, simply tack + theme_nothing() on to the end of your ggplot function. 
   Figure: map3.R
   FigureType: new
+
+- Class: text
+  Output: to take it one step further, maps can even distinguish for us the counties within california. And you guessed it, the county data is stored in map_data("county").
+
+- Class: mult_question
+  Output: Just like we made a subset of the state california data, we create a subset of the county data. Which is the correct command to do this?
+  AnswerChoices: subset(county, region == "california");subset(county, region = "california");subset(county, region == california)
+  CorrectAnswer: subset(county, region == "california")
+  AnswerTests: omnitest(correctVal='subset(county, region == "california")')
+  Hint: pay attention to the minute details
+
+- Class: text
+  Output: Now, we lay the county map on top of the california map by using the + geom_polygon(data = ca_county) function. To create a cleaner looking graph, it's useful to specify whether you want to fill or outline your polygons. 
+
+- Class: figure
+  Output: I set fill = NA and give the color = "white" to make a white border. Remember, you can always use the play() function to play around with the console without swirl getting in the way--so feel free to try out any colors or specifications you wish. 
+  Figure: map4.R
+  FigureType: new
