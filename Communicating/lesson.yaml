@@ -71,9 +71,9 @@
 
 - Class: mult_question
   Output: Which would produce the dimensions of ANES data without the code needed to produce it? 
-  AnswerChoices: ```{r echo = FALSE} dim(ANES) ```;```{r eval = FALSE} dim(ANES) ```;```{r echo = TRUE} dim(ANES) ```
-  CorrectAnswer: ```{r echo = FALSE} dim(ANES) ```
-  AnswerTests: omnitest(correctVal='```{r echo = FALSE} dim(ANES) ```')
+  AnswerChoices: ...echo = FALSE} dim(ANES);...eval = FALSE} dim(ANES) ```;...echo = TRUE} dim(ANES) ```
+  CorrectAnswer: ...echo = FALSE} dim(ANES) ```
+  AnswerTests: omnitest(correctVal='...echo = FALSE} dim(ANES) ```')
   Hint: Pay attention to echo versus eval 
 
 - Class: text
