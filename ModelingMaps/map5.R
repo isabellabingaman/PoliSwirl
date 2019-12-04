@@ -4,7 +4,8 @@ election <- socviz::election
 
 us_states <- map_data("state")
 
-state$region <- state2abbr(state$region)
+us_states <- us_states %>%
+  mutate(st = state2abbr(state$region))
 
 us_states_elec <- left_join(us_states, election)
 
