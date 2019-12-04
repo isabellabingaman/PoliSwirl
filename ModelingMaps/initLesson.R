@@ -11,9 +11,7 @@
   )
 }
 
-#school shooting data 
 
-mapdata <- read.csv(file.path(.get_course_path(), "PoliSwirl", "ModelingMaps", "state-medal-count.csv"))
 
 
 
