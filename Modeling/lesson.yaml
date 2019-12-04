@@ -40,3 +40,8 @@
   CorrectAnswer: ggplot() + geom_polygon(data = usa, aes(x = long, y = lat, group = group))
   AnswerTests: omnitest(correctExpr='ggplot() + geom_polygon(data = usa, aes(x = long, y = lat, group = group))')
   Hint: Type the exact source code
+
+- Class: figure
+  Output: Not too shabby. 
+  Figure: map1.R
+  FigureType: new
