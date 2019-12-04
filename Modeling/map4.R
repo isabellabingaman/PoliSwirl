@@ -1,6 +1,6 @@
 # map 4 
 
-cali <- subset(states, region == "california")
+cali <- subset(state, region == "california")
 
 county <- map_data("county")
 ca_county <- subset(county, region == "california")
