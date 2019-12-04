@@ -100,3 +100,34 @@
   Output: I set fill = NA and give the color = "white" to make a white border. Remember, you can always use the play() function to play around with the console without swirl getting in the way--so feel free to try out any colors or specifications you wish. 
   Figure: map4.R
   FigureType: new
+
+- Class: text
+  Output: Now that we know how to make informative maps, we have the perfect place to visualize our geographical data. This is the perfect opportunity to use the left_join() to bring together map data with a corresponding variable in a political dataset. I'm going to join the election data set with the state map data set. Because they both contain the "region" variable, R will automatically join on that variable, although it can be specified.
+
+- Class: mult_question
+  Output: Which will correctly join the two data sets?
+  AnswerChoices: left_join(us_states, election);join_left(us_states, election);left_join(us_states & election)
+  CorrectAnswer: left_join(us_states, election)
+  AnswerTests: omnitest(correctVal='left_join(us_states, election)')
+  Hint: left_join(us_states, election)
+
+
+- Class: text
+  Output: Now that the two datasets are connected via their geographical data, I can plot the data onto the map. I'm simply using the same state map base and adding on a geom_polygon() that takes on the fill = party argument. 
+
+
+- Class: figure
+  Output: Guidelines and stipulations for color, sizing, and style in ggplot are easily accessible online with a simple Google search of "ggplot aesthetics in R". 
+  Figure: map5.R
+  FigureType: new
+
+- Class: text
+  Output: We can also plot continuous data, which is displayed on a gradient scale of color.  
+
+- Class: text
+  Output: By setting the fill = pct_trump, a continuous variable, R-studio will display this data on a gradient color scale by state. Like any other ggplot, we can specify colors, titles, and other aesthetic elements of the map. 
+
+- Class: figure
+  Output: Many different types of data can be displayed on maps, but political data is especially viable since we almost always collect geographic information in demographic studies. 
+  Figure: map6.R
+  FigureType: new

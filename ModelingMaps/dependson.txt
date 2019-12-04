@@ -10,3 +10,6 @@ stringr
 maps
 mapdata
 ggmap
+poliscidata
+fiftystater
+socviz
