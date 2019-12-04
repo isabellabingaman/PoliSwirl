@@ -120,7 +120,7 @@
   Hint: Remember the difference between errors and warnings 
 
 - Class: text
-  Output: When we are ready to share our R-markdown file, its as simple as selecting "Knit". When you knit the markdown file, R will execute all of the code imbedded in the file and insert the results as appropriate. It will also create a word document, pdf, html or other that will be pulled up for preview as well as saved into the current working directory. 
+  Output: When we are ready to share our R-markdown file, its as simple as selecting "Knit". When you knit the markdown file, R will execute all of the code embedded in the file and insert the results as appropriate. It will also create a word document, pdf, html or other that will be pulled up for preview as well as saved into the current working directory. 
 
 - Class: text
   Output: One of the most common errors in knitting R-markdown files is confusing the information in your current console with the information provided in the file. An R-markdown cannot execute without loading the necessary packages, datasets, etc. to reproduce the code. Think of it as someone running your code in a brand new R-session. 
