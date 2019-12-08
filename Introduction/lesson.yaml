@@ -9,10 +9,10 @@
 - Class: text
   Output: Hi! Welcome to PoliSwirl!
 
-- Class: cmd_question
+- Class: exact_question
   Output: Is this thing on? Type the number 1.
   CorrectAnswer: 1
-  AnswerTests: omnitest(correctExpr='1')
+  AnswerTests: omnitest(correctVal=1)
   Hint: Just type 1, nothing else and nothing more.
 
 - Class: text
@@ -25,7 +25,7 @@
   Output: There are three internal lessons that cover Wrangling data, Modeling data on maps, and Communicating your findings.  
 
 - Class: text
-  Output: There are a few data sets that have been placed in your console for use in this course.
+  Output: There are a few data sets that have been placed in your workspace for use in this course.
 
 
 - Class: cmd_question
