@@ -60,7 +60,7 @@
 - Class: cmd_question
   Output: Rename the "weight" and "follow" columns within ANES data with leading Uppercase Letters and re-assign it back to the original ANES dataset. 
   CorrectAnswer: ANES <- ANES %>% rename(Weight = weight, Follow = follow)
-  AnswerTests: omnitest(correctExpr='ANES <- ANES %>% rename(Weight = weight, Follow = follow)'; expr_creates_var('ANES'))
+  AnswerTests: ANES_func()
   Hint: The correct new column names are "Weight" and "Follow".Start by assigning the dataset back to ANES, then make sure you're using the pipe to identify the data you'll be renaming. Remember to separate the two arguments with a comma.
 
 - Class: text
