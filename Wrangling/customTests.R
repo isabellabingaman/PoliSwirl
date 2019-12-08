@@ -7,6 +7,6 @@ ANES_func <- function() {
     ok <- identical(ANES, my_ANES)
     
   }, silent = TRUE)
-  exists('ok') && isTrue('ok')
+  exists('ok') && isTRUE('ok')
 }
 
