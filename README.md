@@ -23,4 +23,4 @@ To save your progress, be sure to enter the same username each session.
 
 I welcome and _encourage_ suggestions, improvements, and additions to the course.  Feel free to clone, branch, and send me a pull request!  
 
-*This course was created as the Final Project for Isabella Bingaman in Ryan T. Moore's GOV 496 Fall Semester Course*
+Special thanks to @ryantmoore for the introducing me to R, `swirl()`, and the world of GitHub. Another special thanks to @seankross for being unimaginably helpful, even if it was just as a [rubber duck](https://en.wikipedia.org/wiki/Rubber_duck_debugging) at times. :hatched_chick: 
